@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://127.0.0.1:5500/nat.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6 meses 💞</title>
+  <style>
+    :root{
+  --bg: #fff3f6;
+  --card: #ffffff;
+  --ink: #2b1b1e;
+  --pink: #ff88aa;
+  --rose: #ff6b9e;
+  --soft: #ffd6e3;
+  --shadow: 0 10px 30px rgba(255,107,158,0.25);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin:0;
+  font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: radial-gradient(1200px 800px at 10% -10%, #ffe3ee, transparent),
+              radial-gradient(1000px 700px at 100% 10%, #ffd4e7, transparent),
+              var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Acessibilidade */
+.visually-hidden{
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px,1px,1px,1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
+
+/* Fundo de corações */
+.hearts-bg::before,
+.hearts-bg::after{
+  content:"";
+  position: fixed;
+  inset:0;
+  background:
+    radial-gradient(6px 6px at 10% 20%, rgba(255,107,158,0.35) 60%, transparent 61%) 0 0 / 120px 120px,
+    radial-gradient(8px 8px at 70% 40%, rgba(255,136,170,0.35) 60%, transparent 61%) 0 0 / 160px 160px,
+    radial-gradient(7px 7px at 30% 80%, rgba(255,214,227,0.7) 60%, transparent 61%) 0 0 / 140px 140px;
+  pointer-events:none;
+  animation: float 16s linear infinite;
+  opacity:.6;
+  z-index:-1;
+}
+.hearts-bg::after{ animation-duration: 22s; opacity:.4; filter: blur(1px); }
+
+@keyframes float{
+  from{ transform: translateY(0); }
+  to{ transform: translateY(-40px); }
+}
+
+/* Hero */
+.hero{
+  display:grid; place-items:center;
+  min-height: 70vh; padding: 48px 16px;
+}
+.hero-card{
+  background: linear-gradient(180deg,#ffffffcc,#fff7fa);
+  border: 1px solid #ffdfeb;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  padding: 36px 28px 48px;
+  text-align:center;
+  max-width: 760px; width: 100%;
+  position: relative; overflow:hidden;
+}
+.hero-card .script{
+  font-family: "Passions Conflict", cursive;
+  font-size: clamp(56px, 8vw, 96px);
+  line-height: 1;
+  color: var(--rose);
+  margin: 0 0 8px;
+}
+.subtitle{
+  margin: 0 0 12px;
+  font-size: clamp(16px, 2.6vw, 22px);
+  color:#5c3b41;
+}
+
+/* “Senha” simbólica (mantive a classe tiny-lock caso ainda use o <details>) */
+.tiny-lock{
+  margin: 10px auto 18px;
+  max-width: 420px;
+}
+.tiny-lock summary{
+  cursor:pointer;
+  display:inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px dashed #ffb1c8;
+  background: #fff;
+  font-weight: 600;
+}
+.tiny-lock[open] summary{ background: #fff0f6; }
+
+/* Lock-box (campo de senha) */
+.lock-box{
+  border: 1px solid #ffd2e2;
+  background: #fff;
+  padding: 14px;
+  margin-top: 10px; border-radius: 16px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+.lock-box label{ display:block; font-size: 14px; margin-bottom: 8px; color: #6b3a45; font-weight:600; }
+.lock-box input{
+  width: 100%; padding: 10px 12px; border-radius: 12px;
+  border: 1px solid #ffc2d9; outline: none;
+  font-size: 15px;
+  transition: box-shadow .15s ease, border-color .15s ease;
+  background: linear-gradient(180deg,#fff,#fffafc);
+}
+.lock-box input::placeholder{ color: #e39fb3; font-weight:500; }
+.lock-box input:focus{
+  border-color: var(--rose);
+  box-shadow: 0 6px 20px rgba(255,107,158,0.12);
+}
+
+/* Estilo do botão "Confirmar" */
+.lock-box button,
+#checkSenha{
+  display: inline-block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, var(--rose), var(--pink));
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform .08s ease, filter .12s ease, box-shadow .12s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.lock-box button:hover,
+#checkSenha:hover{ filter: brightness(1.03); transform: translateY(-1px); }
+.lock-box button:active,
+#checkSenha:active{ transform: translateY(0); }
+.lock-box button:focus,
+#checkSenha:focus{
+  outline: none;
+  box-shadow: 0 10px 30px rgba(255,107,158,0.25), 0 0 0 4px rgba(255,136,170,0.12);
+}
+
+/* Mensagem de feedback (erro/sucesso) */
+#msg{
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+  min-height: 20px;
+}
+
+/* Botão abrir (mantido caso queira usar) */
+.open-btn{
+  display:inline-block; margin-top: 14px;
+  background: linear-gradient(90deg, var(--rose), var(--pink));
+  color: #fff; font-weight: 700;
+  padding: 12px 20px; border-radius: 999px;
+  box-shadow: var(--shadow);
+  cursor: pointer; user-select: none;
+  transition: transform .08s ease, filter .2s;
+}
+.open-btn:hover{ filter: brightness(1.05); }
+.open-btn:active{ transform: scale(.98); }
+
+/* Efeitos quando abrir */
+#open:checked ~ .confetti{ opacity:1; animation: celebrate 1s ease forwards; }
+#open:checked ~ .glow{ opacity:1; }
+
+.confetti, .glow{
+  position:absolute; inset:0; pointer-events:none; opacity:0; transition: opacity .6s ease;
+}
+.confetti{
+  background:
+    radial-gradient(4px 4px at 20% 30%, #ff86a8 99%, transparent 100%),
+    radial-gradient(4px 4px at 40% 70%, #ffd480 99%, transparent 100%),
+    radial-gradient(4px 4px at 60% 20%, #8ee3ff 99%, transparent 100%),
+    radial-gradient(4px 4px at 80% 60%, #c6ff8e 99%, transparent 100%),
+    radial-gradient(4px 4px at 30% 50%, #b28dff 99%, transparent 100%),
+    radial-gradient(4px 4px at 70% 40%, #ffb3d6 99%, transparent 100%);
+  mix-blend-mode: normal;
+}
+@keyframes celebrate{
+  0%{ transform: translateY(-10px); filter: blur(0); }
+  100%{ transform: translateY(0); }
+}
+.glow{
+  background: radial-gradient(600px 200px at 50% 100%, rgba(255,136,170,.35), transparent 60%);
+}
+
+/* Seções */
+main{ padding: 16px; }
+.section-title{
+  text-align:center;
+  font-size: clamp(22px, 3.2vw, 28px);
+  margin: 24px auto 12px;
+  color: #7a3c49;
+}
+
+/* Carta */
+.letter .paper{
+  background: #fff;
+  border: 1px solid #ffd3e3;
+  border-radius: 20px;
+  padding: clamp(18px, 3vw, 28px);
+  max-width: 860px; margin: 0 auto;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.letter .paper::before{
+  content:"";
+  position:absolute; inset: 0; pointer-events:none;
+  background:
+    linear-gradient(transparent 24px, #ffe7f0 24px, #ffe7f0 26px, transparent 26px) repeat-y;
+  background-size: 100% 28px;
+  opacity:.45;
+  border-radius: 20px;
+}
+.letter p{ position: relative; z-index: 1; margin: 0 0 14px; }
+.assinatura{ font-family: "Passions Conflict", cursive; font-size: 40px; color: var(--rose); }
+
+/* Foto destaque */
+.photo-feature{
+  display:grid; place-items:center;
+  margin: 28px 0;
+}
+.polaroid{
+  background:#fff; border: 1px solid #ffd3e3;
+  box-shadow: 0 18px 40px rgba(0,0,0,.08);
+  border-radius: 12px;
+  padding: 14px 14px 50px;
+  transform: rotate(-2deg);
+  max-width: 380px; width: 96%;
+}
+.polaroid img{
+  display:block; width:100%; height:auto; border-radius: 8px;
+  object-fit: cover;
+}
+.polaroid span{
+  display:block; text-align:center; margin-top: 8px;
+  font-weight: 600; color:#6b3a45;
+}
+.caption{
+  font-size: 14px; opacity:.75; margin-top: 10px; text-align:center;
+}
+
+/* Galeria */
+.gallery .polaroid-grid{
+  display:grid; gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  max-width: 980px; margin: 12px auto 0;
+}
+.polaroid.small{
+  padding: 10px 10px 42px;
+  transform: rotate(1.2deg);
+}
+.polaroid.small:nth-child(2){ transform: rotate(-1.5deg); }
+.polaroid.small:nth-child(3){ transform: rotate(.6deg); }
+.polaroid.small:nth-child(4){ transform: rotate(-.8deg); }
+.polaroid.small figcaption{
+  display:block; text-align:center; margin-top: 6px; font-size: 14px; color:#5b3240; font-weight:600;
+}
+.hint{ text-align:center; font-size:12px; opacity:.6; margin-top: 10px; }
+
+/* Timeline */
+.timeline .steps{
+  list-style:none; padding:0; margin: 20px auto; max-width: 900px;
+  counter-reset: step;
+  display:grid; gap: 14px;
+}
+.timeline .steps li{
+  background: linear-gradient(0deg, #fff, #fff9fc);
+  border:1px solid #ffd7e7; border-radius: 16px; padding: 14px 16px;
+  box-shadow: 0 6px 16px rgba(255,139,170,.15);
+  position: relative;
+}
+.timeline .steps li h3{
+  margin:0 0 6px; font-size: 16px; color:#7a3c49;
+}
+.timeline .steps li::before{
+  counter-increment: step;
+  content: counter(step);
+  position:absolute; top: -10px; left: -10px;
+  background: var(--rose); color:#fff; font-weight:700;
+  width: 32px; height: 32px; display:grid; place-items:center;
+  border-radius: 10px; box-shadow: var(--shadow);
+}
+
+/* Abas de recadinhos */
+.notes .tabs{
+  display:flex; gap: 8px; justify-content:center; margin-bottom: 10px; flex-wrap: wrap;
+}
+.notes .tabs label{
+  cursor:pointer; padding: 8px 14px; border-radius: 999px;
+  border:1px solid #ffc4d8; background:#fff; font-weight:600;
+  transition: background .2s, transform .04s;
+}
+.notes .tabs label:active{ transform: scale(.98); }
+
+.tab-panels{ max-width: 780px; margin: 0 auto; }
+.tab-panels .panel{
+  display:none; background:#fff; border:1px solid #ffd3e3; border-radius:16px;
+  padding: 14px 16px; box-shadow: var(--shadow);
+}
+
+#n1:checked ~ .tabs label[for="n1"],
+#n2:checked ~ .tabs label[for="n2"],
+#n3:checked ~ .tabs label[for="n3"]{
+  background: linear-gradient(90deg, var(--rose), var(--pink));
+  color:#fff; border-color: transparent;
+}
+#n1:checked ~ .tab-panels .panel:nth-child(1){ display:block; }
+#n2:checked ~ .tab-panels .panel:nth-child(2){ display:block; }
+#n3:checked ~ .tab-panels .panel:nth-child(3){ display:block; }
+
+/* Rodapé */
+.footer{
+  text-align:center; padding: 24px 10px 60px; color:#70404a;
+}
+.footer .mini{ font-size:12px; opacity:.7; }
+
+/* Responsividade geral e ajustes para celular */
+@media (max-width: 900px){
+  .hero{
+    min-height: 60vh;
+    padding: 34px 14px;
+  }
+  .hero-card{
+    padding: 28px 20px 34px;
+    border-radius: 22px;
+  }
+  .polaroid{ max-width: 320px; }
+  .letter .paper{ padding: clamp(14px, 4vw, 22px); }
+}
+
+/* Ajustes finos para mobile (celulares) */
+@media (max-width: 480px){
+  .hero{
+    min-height: auto;
+    padding: 22px 12px;
+  }
+  .hero-card{
+    padding: 20px 16px 22px;
+    border-radius: 18px;
+    max-width: 96%;
+  }
+  .hero-card .script{
+    font-size: clamp(36px, 12vw, 56px);
+  }
+  .subtitle{ font-size: 14px; }
+
+  /* Lock-box - empilha e ocupa largura */
+  .lock-box{
+    padding: 12px;
+  }
+  .lock-box label{ font-size: 13px; }
+  .lock-box input{ font-size: 15px; padding: 10px; }
+  .lock-box button,
+  #checkSenha{ font-size: 15px; padding: 12px; }
+
+  /* Carta, galeria e polaroids ficam menores e com menos padding */
+  .letter .paper{ padding: 14px; border-radius: 14px; }
+  .polaroid{ padding: 10px 10px 40px; transform: none; width: 100%; }
+  .polaroid.small{ padding: 8px 8px 34px; }
+  .gallery .polaroid-grid{ gap: 12px; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+
+  .timeline .steps{ gap: 10px; }
+  .timeline .steps li{ padding: 12px; }
+  .timeline .steps li h3{ font-size: 15px; }
+
+  .section-title{ margin: 18px 0 8px; font-size: 20px; }
+
+  .footer{ padding-bottom: 40px; }
+}
+
+/* Pequena melhoria para tablets */
+@media (max-width: 768px) and (min-width: 481px){
+  .hero-card .script{ font-size: clamp(44px, 10vw, 72px); }
+  .polaroid{ max-width: 340px; }
+}
+
+/* Evita imagens estourando a largura */
+img{ max-width: 100%; height: auto; display: block; }
+
+/* Garantia: se o botão abrir surpresa for removido, layout não quebra */
+.open-btn, .confetti, .glow{ backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+
+/* Pequenos tweaks de usabilidade */
+a, button { -webkit-tap-highlight-color: rgba(0,0,0,0.05); }
+
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link href="./6 meses 💞_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./6 meses 💞_files/nat.css">
+  <meta name="theme-color" content="#ff88aa">
+  <meta name="description" content="Um cantinho só nosso. 6 meses de amor.">
+</head>
+<body>
+  <!-- Corações de fundo -->
+  <div class="hearts-bg" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="hero-card">
+      <h1 class="script">nosso amor</h1>
+      <p class="subtitle">celebrando seus primeiros<strong> 6 meses</strong></p>
+
+      <!-- BLOCO DE SENHA -->
+      <div class="lock-box">
+        <label for="senha">Digite nossa data (DD/MM/AA):</label>
+        <input id="senha" type="text" placeholder="ex.: 06/09/25">
+        <button id="checkSenha">Confirmar</button>
+            <p id="erro" style="color: red; display: none;">Ops! Tenta de novo 😅</p>
+        <p id="msg"></p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo escondido até acertar a senha -->
+  <main id="conteudo" style="display:none;">
+    <!-- Carta de amor -->
+    <section class="letter">
+      <h2 class="section-title">Carta pra você</h2>
+      <div class="paper">
+        <p>Meu amor,</p>
+        <p>
+          Hoje a gente completa <strong>6 meses</strong>, e eu só consigo agradecer a Deus
+          por cada detalhe que vivemos. Eu te admiro pelo coração lindo, pela força
+          e por como você transforma os meus dias.
+          Enfim, 6 meses de nós meu amor, falando assim parece ser muito pouco tempo né, mas 6 meses ao seu lado parece ser tanto tempo. 7 meses que nos conhecemos mas 6 meses que eu comecei a ter certeza de que é você o AMOR DA MINHA VIDA, e a cada dia que passa voce só confirma esse pensamento na minha cabeça. 6 meses que eu tive a certeza que é com você que eu quero assumir esse compromisso, esse compromisso de ser seu namorado, seu noivo, seu marido, ser pai dos seus filhos.
+Meu deus amor, quando eu olho pra trás eu nem acredito que tudo isso foi SÓ 6 meses, tudo que nós ja passamos, ja vivemos, momentos maravilhosos ao seu lado e momentos difíceis também, onde você esteve sempre comigo disposta a me entender, me ajudar, me consolar. E momentos também onde nós mesmo acabamos deixando as coisas difíceis, as vezes com brigas desnecessárias, ciúmes atoa. E momentos também onde Deus precisava que nós possemos para poder nos fortalecer como casal, como um só, e como individual também, momentos difíceis onde foi necessário para vivermos uma vida toda juntos, e principalmente, o reino dos céus juntos.
+E olha, cada momento desses foram necessários pra hoje eu poder dizer que eu jamais trocaria você, que é você que eu escolho com a maior certeza da minha vida, é você com quem eu quero dividir a vida, e claro, dividir uma alma e dar a Deus novos grandes servos dele que virão de nós.
+
+Eu te agradeço do fundo do meu coração por ser essa pessoa pra mim, essa pessoa tão incrível que colore os meus dias, que me tira os melhores sorrisos, que me motiva todos os dias a me esforçar para dar uma vida digna pra vc e nossa futura família. Obrigado por sempre me dar apoio, por ser o ombro em que eu posso confiar pra chorar, mesmo que as vezes vc nem saiba o porque, mas vc sempre se estende a consolar, e só na sua presença, mesmo no seu silêncio, vc nem imagina quanta coisa se cura dentro de mim.
+
+Eu peço perdão pelas vezes em que não sou o melhor namorado do mundo, pelas vezes que fiz você se sentir mal, chorar, se sentir insuficiente, se sentir insegura e por não te passar a confiança que você tanto precisa. Mas nada disso jamais seria com intenção de te ferir ta, pelo contrário, eu quero te fazer bem, te fazer feliz e ser o melhor namorado de todos, porque vc merece.
+
+E pra ser bem sincero, ainda temos muito oque aprender juntos, temos muito oque ajustar e melhorar, mas isso a gente vai conseguir com o tempo, pois temos uma vida toda pra fazermos tudo oque a gente quiser, sem pressa, no tempo de Deus.
+
+Não vou me cansar nunca te dizer que seu nome e nosso relacionamento SEMPRE está nas minhas orações, em todas as minhas conversas com Deus, em todos os meus terços, tudo, porque eu desejo que seja voce a mulher da minha vida, e desejo que vc seja a mulher mais feliz do mundo, e peço sempre pra Deus me capacitar pra ser esse papel tão importante na sua vida.
+
+EU TE AMO DEMAIS E VOU TE AMAR PRA SEMPRE, ATÉ A LUA 🌕 ATÉ A MORTE NOS SEPARAR E ATÉ CHEGARMOS NO CÉU.
+
+Quero que voce possa contar sempre comigo, em absolutamente TUDO, sem exceção de nada, voce é tudo que eu preciso e quero sempre ser o mesmo pra você. EU AMO MUITO VC MINHA VIDA. 🤍
+        </p>
+        <p>
+          Prometo continuar cuidando de nós, dos nossos sonhos e de cada “bom dia”
+          com carinho. Que se Deus quiser esses 6 meses é apenas o começo de uma vida inteira. Que venham muitos meses e anos.
+        </p>
+        <p class="assinatura">Com todo meu amor,<br>O amor da sua vida.</p>
+      </div>
+    </section>
+
+    <!-- Foto destaque -->
+    <section class="photo-feature">
+      <div class="polaroid">
+        <img src="./6 meses 💞_files/nós.jpeg" alt="Nós dois" onerror="this.style.opacity=&#39;0.1&#39;; this.alt=&#39;(adicione sua foto em img/nos-1.jpg)&#39;;">
+        <span>eu + você = nós</span>
+      </div>
+      <p class="caption">Guardei esse sorriso aqui. Ele é minha casa.</p>
+    </section>
+
+    <!-- Galeria polaroid -->
+    <section class="gallery">
+      <h2 class="section-title">Nossas memórias</h2>
+      <div class="polaroid-grid">
+        <figure class="polaroid small">
+          <img src="./6 meses 💞_files/primeiro.role.jpeg" alt="memória 1" onerror="this.style.opacity=&#39;0.1&#39;">
+          <figcaption>primeiro rolê</figcaption>
+        </figure>
+        <figure class="polaroid small">
+          <img src="./6 meses 💞_files/risada.jpeg" alt="memória 2" onerror="this.style.opacity=&#39;0.1&#39;">
+          <figcaption>risadas</figcaption>
+        </figure>
+        <figure class="polaroid small">
+          <img src="./6 meses 💞_files/comida.jpg" alt="memória 3" onerror="this.style.opacity=&#39;0.1&#39;">
+          <figcaption>comida favorita</figcaption>
+        </figure>
+        <figure class="polaroid small">
+          <img src="./6 meses 💞_files/rosa.jpg" alt="memória 4" onerror="this.style.opacity=&#39;0.1&#39;">
+          <figcaption>céu cor de rosa</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Linha do tempo -->
+    <section class="timeline">
+      <h2 class="section-title">Nossa linha do tempo:</h2>
+      <ol class="steps">
+        <li>
+          <h3>Janeiro/Fevereiro</h3>
+          <p>Nosso começo tímido e o primeiro abraço no Musa que mudou tudo. E nossa primeira adoração juntos.</p>
+        </li>
+        <li>
+          <h3>Março</h3>
+          <p>Conhecemos nossos sogros e rolou primeiro beijo, seu aniversário e primeiro buquê de flores.</p>
+        </li>
+        <li>
+          <h3>Abril</h3>
+          <p>Já tínhamos boa intimidade, expo, show e ainda ficávamos nas cadeiras do fundo da sua casa.</p>
+        </li>
+        <li>
+          <h3>Maio</h3>
+          <p>Paraguai, você já tava bem ciumenta, nosso primeiro Terço Jovem, e você ganhou seu buquê de Girassol.</p>
+        </li>
+        <li>
+          <h3>Junho</h3>
+          <p>Finalmente o pedido de namoro, nosso primeiro dia dos namorados, seu buquê que eu fiz à mão, o mês mais forte espiritualmente e grandes mudanças no nosso relacionamento.</p>
+        </li>
+        <li>
+          <h3>Julho</h3>
+          <p>Briguinhas mais frequentes, mas sempre nos resolvendo no final, ainda nos adaptando às mudanças e o mês mais difícil para nós, mas tudo servindo de fortalecimento em nosso amor, e no final sempre dá certo.</p>
+        </li>
+        <li>
+          <h3>Agosto</h3>
+          <p>Boa estabilizada em nosso relacionamento, aprendemos a lidar com nossas diferenças, nosso terço da Colo de Deus, e claro, te amando mais do que nunca.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Recadinhos -->
+    <section class="notes">
+      <h2 class="section-title">Recadinhos pra você</h2>
+
+      <input class="visually-hidden" type="radio" name="note" id="n1" checked="">
+      <input class="visually-hidden" type="radio" name="note" id="n2">
+      <input class="visually-hidden" type="radio" name="note" id="n3">
+
+      <div class="tabs">
+        <label for="n1">Motivos</label>
+        <label for="n2">Promessas</label>
+        <label for="n3">Planos</label>
+      </div>
+
+      <div class="tab-panels">
+        <div class="panel">
+          <ul>
+            <li>Seu cuidado e preocupação comigo e por quem você ama.</li>
+            <li>Teu sorriso que ilumina meus dias.</li>
+            <li>O jeito que você me faz querer ser melhor.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <ul>
+            <li>Ser sincero e leal, sempre.</li>
+            <li>Te ouvir com atenção e carinho.</li>
+            <li>Celebrar suas conquistas como minhas.</li>
+            <li>Te amar e respeitar pelo resto de nossas vidas.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <ul>
+            <li>Nosso almoço de todos os domingos</li>
+            <li>Muitas viagens antes de ter filhos.</li>
+            <li>Uma vida mtrimonial com fé, Jesus e Maria, adoração, comunhão, missa e terço juntos</li>
+            <li>Dar a Deus e ao mundo dois grandes servos de Cristo.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <p>
+        Feito com amor pelo <strong>seu amor</strong> para <strong>o amor da minha vida.</strong> 💖
+      </p>
+    </footer>
+  </main>
+
+  <!-- Script da senha -->
+<script>
+    document.getElementById("checkSenha").addEventListener("click", function() {
+      const senha = document.getElementById("senha").value.trim();
+      const msg = document.getElementById("msg");
+
+      if (senha === "30/01/25") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("conteudo").style.display = "block";
+      } else {
+        msg.textContent = "Ops! Data errada, tenta de novo 💌";
+        msg.style.color = "red";
+      }
+    });
+
+    document.getElementById("checkSenha").addEventListener("click", function(){
+      const senha = document.getElementById("senha").value.trim();
+      const msg = document.getElementById("msg");
+      const conteudo = document.getElementById("conteudo");
+ 
+      if(senha === "30/01/25"){
+        msg.textContent = "Acertou! 💖 Agora sim, pode abrir nossa surpresa!";
+        msg.style.color = "green";
+        conteudo.style.display = "block";
+        window.scrollTo({ top: conteudo.offsetTop, behavior: "smooth" });
+      } else {
+        msg.textContent = "Ops, tenta de novo! 😉";
+        msg.style.color = "red";
+        conteudo.style.display = "none";
+      }
+    });
+  </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
